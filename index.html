@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spectrum Voices</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="loading-container" id="loading">
+        <div class="fractal-loader">
+            <div class="piece"></div>
+            <div class="piece"></div>
+            <div class="piece"></div>
+        </div>
+    </div>
+
+    <div class="container" id="main-content">
+        <header>
+            <h1>Welcome to the Podcast</h1>
+        </header>
+        
+        <main>
+            <img src="Designer.jpeg" alt="Podcast Illustration" class="center-image">
+            <nav>
+                <ul>
+                    <li><a href="#" id="link1">Mark de Roon</a></li>
+                    <li><a href="#" id="link2">Vincent van den Braken</a></li>
+                </ul>
+            </nav>
+        </main>
+    </div>
+
+    <script>
+        // Simple loading screen removal
+        window.addEventListener("load", () => {
+            const loading = document.getElementById("loading");
+            const mainContent = document.getElementById("main-content");
+
+            loading.classList.add("fade-out");
+            setTimeout(() => {
+                loading.style.display = "none";
+                mainContent.style.display = "block"; // Show the main content after loading
+            }, 500);
+        });
+    </script>
+</body>
+</html>
